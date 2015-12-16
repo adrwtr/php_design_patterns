@@ -261,19 +261,21 @@ class HTMLPageFuncionario extends AbstractPageDirector {
   function writeln($line_in) {
     echo $line_in."<br/>";
   }
-  ?>
 
-<BR /><BR />
-<BR /><BR />
-<BR /><BR />
-Intenção  <BR /><BR />
- <BR /><BR />
+/**
+ * Intenção
+ *
+ * 1 - Separar a construção de um objeto complexo da construção de sua representação.
+ * Ou seja, estamos separando a construção do objeto HTMLPage de sua representação final HTMLPageDirector.
+ *
+ * 2 - Desta forma podemos usar o objeto HTMLPageBuilder para construir vários tipos de representação
+ * (HTMLPageDirector, HTMLPageFuncionário, etc)
+ *
+ * 3 - Quando usar: quando a aplicação precisa criar elementos de uma classe complicada (HTMLPage).
+ * A especificação (HTMLPageBuilder) da classe complicada fica em um lugar separado de sua representação
+ * (HTMLPageDirector, HTMLPageFuncionário, etc);
+ */
 
-1 - Separar a construção de um objeto complexo da construção de sua representação. <BR />
-Ou seja, estamos separando a construção do objeto HTMLPage de sua representação final HTMLPageDirector. <BR /><BR />
-
-2 - Desta forma podemos usar o objeto HTMLPageBuilder para construir vários tipos de representação (HTMLPageDirector, HTMLPageFuncionário, etc) <BR /><BR />
-
-3 - Quando usar: quando a aplicação precisa criar elementos de uma classe complicada (HTMLPage). <BR />
-A especificação (HTMLPageBuilder) da classe complicada fica em um lugar separado de sua representação (HTMLPageDirector, HTMLPageFuncionário, etc); <BR />
-
+?>
+</body>
+</html>

@@ -68,23 +68,21 @@ function writeln($line_in)
     echo $line_in . "<br/>";
 }
 
+
+/**
+ * Intenção
+ *
+ * - Criar uma interface que irá facilitar a criação de familias de objetos relacionados.
+ * Essa interface pode ser usada para injetar dependencia sem usar as classes contretas.
+ *
+ * - Criar uma hierarquia que encapsula: muitas possibilidades (no exemplo, criar mais de um metodo em AbstractFactoryComponente)
+ *
+ * - Usar o operador new nas classes é considerado perigoso.
+ *
+ * - Cliente nunca criam objetos diretamente, eles sempre pedem para as fabricas fazerem isso para eles. (na fabrica tem um return new objeto())
+ *
+ * - A criação da familias está na correta definição das classes abstratas, que serão injetadas em funções.
+ */
 ?>
-
-
-<BR /><BR />
-<BR /><BR />
-<BR /><BR />
-Intenção  <BR /><BR />
-
-- Criar uma interface que irá facilitar a criação de familias de objetos relacionados. Essa interface pode ser usada para injetar dependencia sem usar as classes contretas.  <BR /><BR />
-
-- Criar uma hierarquia que encapsula: muitas possibilidades (no exemplo, criar mais de um metodo em AbstractFactoryComponente)  <BR /><BR />
-
-- Usar o operador new nas classes é considerado perigoso.  <BR /><BR />
-
-- Cliente nunca criam objetos diretamente, eles sempre pedem para as fabricas fazerem isso para eles. (na fabrica tem um return new objeto())
-
-- A criação da familias está na correta definição das classes abstratas, que serão injetadas em funções.
-
 </body>
 </html>
