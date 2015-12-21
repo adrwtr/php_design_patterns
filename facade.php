@@ -36,7 +36,6 @@ class Book
 }
 
 // magica está aqui, esta classe executa as 2 outras classes em sequencia:
-// 
 class CaseReverseFacade
 {
     public static function reverseStringCase($stringIn)
@@ -164,6 +163,17 @@ function writeln($line_in)
 {
     echo $line_in . "<BR>";
 }
+
+
+/**
+ * - No exemplo, o programa cliente não precisa conhecer como reverseCase funciona.
+ * A cliente usa apenas a classe CaseReverseFacade para realizar a operação.
+ *
+ * - A ideia é tornar facil o uso de "reverseCase"
+ *
+ * -
+ *
+ */
 
 ?>
 </body>

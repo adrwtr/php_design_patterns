@@ -6,7 +6,7 @@
 <?php
 /**
  * Neste padrão nós especificamos um objeto com vários atributos - HTMLPage
- * Este objeto será criado por nossa classe Builder =- HTMLPageBuilder
+ * Este objeto será criado por nossa classe Builder - HTMLPageBuilder
  *
  * Porém uma outra classe irá fazer o uso do Builder para inicializar os atributos - HTMLPageDirector
  *

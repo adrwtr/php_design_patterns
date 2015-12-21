@@ -151,7 +151,7 @@ class clonarFiesta extends clonar
     }
 }
 
-// padr?o
+// padrao
 class prototype
 {
 
@@ -182,7 +182,19 @@ $objNovoFiesta->mostrar();
 
 $objCarro = new carroGol();
 $objPrototype->setPrototipo($objCarro);
+
 // cria clone
 $objNovo =& $objPrototype->criaCarroClone();
 $objNovo->mostrar();
+
+
+
+/**
+ * Objeto do padrão:
+ *
+ * - Permitir com que clientes não usem o NEW, e sim, obtenham clone de classes já criadas.
+ *
+ * - Este padrão deve ser usado quando a inicialização de objetos tem muito código (muitos atributos a serem iniciados).
+ * O metodo clonagem irá copiar os principais atributos para você.
+ */
 ?>

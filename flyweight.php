@@ -1,10 +1,10 @@
 <?
 /**
-Como usar:
-Criar as classes Flyweight, que implementam IFlyweight;
-Criar uma class FlyweightFactory, que possui uma coleção de IFlyweight;
-Implementar as operações (Operation);
-Criar um construtor que inicialize a coleção de IFlyweight.
+ * Como usar:
+ * Criar as classes Flyweight, que implementam IFlyweight;
+ * Criar uma class FlyweightFactory, que possui uma coleção de IFlyweight;
+ * Implementar as operações (Operation);
+ * Criar um construtor que inicialize a coleção de IFlyweight.
  */
 
 interface ISanduiche
@@ -75,7 +75,7 @@ class Misto extends Sanduiche
 /**
  * Fabrica
  */
-//FlyweightFactory
+//padrao FlyweightFactory
 class SanduichesFactory
 {
     var $arrSanduiches;
@@ -133,3 +133,11 @@ function writeln($line_in)
 {
     echo $line_in . "<BR>";
 }
+
+/**
+ * - usar quando se precisa de muitos objetos, e ao mesmo tempo não se quer usar muita memoria
+ *
+ * - Modern web browsers use this technique to prevent loading same images twice.
+ *
+ * -
+ */

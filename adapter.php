@@ -7,6 +7,7 @@
 /**
  * Imagine que nao pode alterar a classe simplebook.
  * Mais a aplicação final precisa usar o método getAuthorAndTitle
+ *
  * Então é criado um BookAdapter para conter o metodo necessário.
  */
 
@@ -66,7 +67,6 @@ function writeln($line_in)
 {
     echo $line_in . "<br/>";
 }
-
 ?>
 </body>
 </html>

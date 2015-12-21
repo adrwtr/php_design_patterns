@@ -6,9 +6,12 @@
 <?
 /**
  * Ao ler sobre o composite lembre-se do diagrama da UML
+ *
  * Nada mais é do que uma classe pai que pode ter várias classes filhas.
- * Essa classe pai precisa ter acessos tipo, add, get, remove e display para seus filhos.
+ * Essa classe pai precisa ter metodos de acessos: add, get, remove e display para seus filhos.
  */
+
+// padrao abstrato
 abstract class AbstractPrateleira
 {
     abstract function getBookInfo($previousBook);
@@ -68,10 +71,11 @@ class OneBook extends AbstractPrateleira
     }
 }
 
+// padrao de projeto composite
 class PrateleiraDeLivros extends AbstractPrateleira
 {
-
     private $oneBooks = array();
+
     private $bookCount;
 
     public function __construct()
@@ -102,6 +106,7 @@ class PrateleiraDeLivros extends AbstractPrateleira
     {
         $this->setBookCount($this->getBookCount() + 1);
         $this->oneBooks[ $this->getBookCount() ] = $oneBook;
+
         return $this->getBookCount();
     }
 
@@ -109,13 +114,14 @@ class PrateleiraDeLivros extends AbstractPrateleira
     {
         $counter = 0;
 
-        while (++$counter <= $this->getBookCount()) {
-            if ($oneBook->getBookInfo(1) ==
-                $this->oneBooks[ $counter ]->getBookInfo(1)
-            ) {
+        while (++$counter <= $this->getBookCount())
+        {
+            if ($oneBook->getBookInfo(1) == $this->oneBooks[ $counter ]->getBookInfo(1))
+            {
                 for ($x = $counter; $x < $this->getBookCount(); $x++) {
                     $this->oneBooks[ $x ] = $this->oneBooks[ $x + 1 ];
                 }
+
                 $this->setBookCount($this->getBookCount() - 1);
             }
         }
@@ -178,6 +184,16 @@ function writeln($line_in)
     echo $line_in . "<br/>";
 }
 
+
+/**
+ * - Quando for necessário manipular uma coleção de objetos
+ *
+ * - Bom uso em menus, diretórios, containers, etc.
+ *
+ */
+
 ?>
 </body>
 </html>
+
+

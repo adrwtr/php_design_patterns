@@ -5,13 +5,21 @@
 <body>
 <?
 /**
- * O padrao bridge separa a abstração da implementação,
- * aonde pode-se ter uma interface aonde a implementação está muito variada.
- * Ele desacopla abstração
+ * Imagine que você tem as classes Programador e Homologador(Qualidade)
+ * Essas classes realizam trabalhos distintos. Programador programa e Homologador Testa.
+ *
+ * O nosso sistema irá usar a função produz para as duas classes acima.
+ *
+ * O padrão Bridge vai separar o que Programador faz com o que Homologador faz através de uma
+ * segunda interface chamada Tarefa.
+ *
+ * Os dois funcionários irão produzir Tarefas, e a tarefa terá a implementação variada para cada produtor.
+ *
+ * Desta forma, se precisarmos criar um CHEFE, ou um Designer, será fácil pois a implementação estará desacoplada.
  *
  * A magica está em produz e em realiza.
  * Realiza é a implementação desacoplada
- * E Produz é a chamada para um implementação
+ * E Produz é a chamada para um implementação de realiza
  */
 
 interface Colaborador
@@ -32,7 +40,7 @@ class Programador implements Colaborador
     }
 
     // aqui está a magica.. o que é tarefa?
-    // pode ser qualquer coisa, e está desacoplada
+    // pode ser qualquer coisa, e está desacoplada (bridge)
     public function produz()
     {
         echo "\nProgramador trabalhando <BR><BR>";
@@ -70,7 +78,7 @@ class Homologador implements Colaborador
 
 }
 
-
+// bridge
 interface Tarefa
 {
     public function realiza();
@@ -134,6 +142,18 @@ $homologador->produz();
 $tarefaDoHomologador = new ProgramacaoRuby();
 $homologador->recebeTarefa($tarefaDoHomologador);
 $homologador->produz();
+
+
+/**
+ *  Use este padrão quando:
+ *
+ *  você precisa altera a implementação em tempo de execução
+ *  você tem muitas classes de uma mesma interface, e muitas implementações
+ *  você precisa distribuir uma implementação para muitos objetos
+ *
+ * - Uma ponte entre: O que o cliente precisa(tarefa) e o que a plataforma precisa(produz).
+ */
+
 ?>
 </body>
 </html>

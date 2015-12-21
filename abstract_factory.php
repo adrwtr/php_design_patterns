@@ -79,7 +79,7 @@ function writeln($line_in)
  *
  * - Usar o operador new nas classes é considerado perigoso.
  *
- * - Cliente nunca criam objetos diretamente, eles sempre pedem para as fabricas fazerem isso para eles. (na fabrica tem um return new objeto())
+ * - Clientes nunca criam objetos diretamente, eles sempre pedem para as fabricas fazerem isso para eles. (Na fabrica tem um return new objeto())
  *
  * - A criação da familias está na correta definição das classes abstratas, que serão injetadas em funções.
  */
